@@ -31,7 +31,7 @@ class ProductController extends Controller
                     $query->orderByDesc($request->input('sortBy'));
                 }
         } else {
-            $query->sortBy('name');
+            $query->orderBy('name');
         }
 
         return response()->json($query->get());
